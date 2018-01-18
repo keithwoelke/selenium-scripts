@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://localhost:9091" />
+<title>New Test</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">New Test</td></tr>
+</thead><tbody>
+<!--<tr>
+	<td>open</td>
+	<td>/wanted/missing</td>
+	<td></td>
+</tr>-->
+<tr>
+	<td>label</td>
+	<td>start</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>1</td>
+	<td>i</td>
+</tr>
+<tr>
+	<td>storeXpathCount</td>
+	<td>//div[@id='x-missing']/table/tbody/tr</td>
+	<td>limit</td>
+</tr>
+<tr>
+	<td>while</td>
+	<td>${i} &lt;= ${limit}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='x-missing']/table/tbody/tr[${i}]/td[3]</td>
+	<td>episode</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>episode = ${episode}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>`${episode}`.indexOf('0x') == -1</td>
+	<td>continueWhile</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='x-missing']/table/tbody/tr[${i}]/td[4]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Search</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='episode-search-region']/div/div/button[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementNotPresent</td>
+	<td>id=followingBalls</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeXpathCount</td>
+	<td>//div[@id='episode-release-grid']/table/tbody/tr</td>
+	<td>count</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>count = ${count}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>${count} &gt; 0</td>
+	<td>skipDisable</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='modal-region']/div/div/div/div/h3/i</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>skipDisable</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.close</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>continueWhile</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>${i} + 1</td>
+	<td>i</td>
+</tr>
+<tr>
+	<td>endWhile</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>css=#x-pager div ul :not(li.disabled) i[data-action=next]</td>
+	<td>nextPageButton</td>
+</tr>
+<tr>
+	<td>storeElementPresent</td>
+	<td>${nextPageButton}</td>
+	<td>hasNext</td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>!${hasNext}</td>
+	<td>done</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='x-pager']/div/ul/li[4]/i</td>
+	<td></td>
+</tr>
+<tr>
+	<td>goto</td>
+	<td>start</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>done</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>
